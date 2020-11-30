@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 
-{/*1. Spread operator */}
+/*1. Spread operator */
   var string1 = '안녕하세요.';
   var string2 = '반갑습니다.';
   var greeting = `${string1} ${string2}`;
@@ -15,7 +14,7 @@ import './App.css';
   var operator1 = `곱셈값은 ${value1 * value2}입니다.`;
   var operator2 = `${boolValue ? '참' : '거짓'}입니다.`;
 
-{/*2-1. Spread operator */}
+/*2-1. Spread operator */
   var array1 = ['one', 'two'];
   var array2 = ['three', 'four'];
   const combined1 = [...array1, ...array2];
@@ -23,32 +22,32 @@ import './App.css';
 
   function func(...args) { var [first, ...others1] = args; }
 
-{/*2-2. 객체 전개 연산자 사용 */}
-    var objectOne = { one: 1, two: 2, others: 0 };
-    var objectTwo = { three: 3, four: 4, others: -1 };
-  {/* -------------------------------------------------- */}
+/*2-2. 객체 전개 연산자 사용 */
+    var objectOne = { one: 1, two: 2, others2: 0 };
+    var objectTwo = { three: 3, four: 4, others2: -1 };
+  /* -------------------------------------------------- */
     var combined2 = {
       one: objectOne.one, 
       two: objectOne.two,
       three: objectTwo.three,
       four: objectTwo.four,
     };
-  {/* -------------------------------------------------- */}
-    var combined2 = Object.assign({}, objectOne, objectTwo);
-    var combined2 = {
+  /* -------------------------------------------------- */
+    var combined3 = Object.assign({}, objectOne, objectTwo);
+    var combined4 = {
       ...objectOne,
       ...objectTwo,
     }
-  {/* -------------------------------------------------- */}
-    var combined2 = Object.assign({}, objectTwo, objectOne);
-    var combined2 = {
+  /* -------------------------------------------------- */
+    var combined5 = Object.assign({}, objectTwo, objectOne);
+    var combined6 = {
       ...objectTwo,
       ...objectOne,
     }
-  {/* -------------------------------------------------- */}  
+  /* -------------------------------------------------- */  
     var others2 = Object.assign({}, combined2);
-    delete others2.other2;
-    var { other, ...others  } = combined2;
+    delete others1.other2;
+    var { other, ...other } = combined2;
 
 
 
